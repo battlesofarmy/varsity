@@ -40,12 +40,15 @@ body{
 button{
     padding: 10px 16px;
     background-color: teal;
-    color: white;
     font-size: 16px;
     font-weight: 600;
     border: none;
     cursor: pointer;
     border-radius: 6px;
+}
+a{
+    color: white;
+    text-decoration: none;
 }
 </style>
 <body>
@@ -57,27 +60,14 @@ button{
 
     <div id="root">
 
+<!-- 
         <div class="item">
             <div class="content">
                 <h2>Course Outline: </h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut ex esse quaerat consequuntur blanditiis dolorum!</p>
             </div>
             <button>Download</button>
-        </div>
-        <div class="item">
-            <div class="content">
-                <h2>Course Outline: </h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut ex esse quaerat consequuntur blanditiis dolorum!</p>
-            </div>
-            <button>Download</button>
-        </div>
-        <div class="item">
-            <div class="content">
-                <h2>Course Outline: </h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut ex esse quaerat consequuntur blanditiis dolorum!</p>
-            </div>
-            <button>Download</button>
-        </div>
+        </div> -->
 
 
     </div>
@@ -85,9 +75,15 @@ button{
 <p>Muntasir Ahmed Fahim</p>
 <br>
 <script>
-    const titles = ['Course Title','Lecture-1','Lecrure-2'];
-    const descriptions = ['Computer-Fundamentals-Programming-Techniques','test','test'];
-    const links = ['test','test','test'];
+    const titles = ['Course Outline:','Lecture-1','Lecrure-2'];
+    const descriptions = [
+        'Computer Definition, Types of Computer, About Workstation',
+        'Computer Definition, Types of Computer, About Workstation'
+    ];
+    const links = [
+        'https://drive.usercontent.google.com/uc?id=1zjYY4wAY3j4tf69UFYnERcZreAw96fPd&export=download',
+        'https://drive.usercontent.google.com/uc?id=1zjYY4wAY3j4tf69UFYnERcZreAw96fPd&export=download',
+    ];
 
     const root = document.getElementById('root');
 
@@ -98,9 +94,9 @@ button{
         div.innerHTML =  `
                 <div class="content">
                     <h2>${titles[i]} </h2>
-                    <p>${descriptions}</p>
+                    <p>${descriptions[i]}</p>
                 </div>
-                <button>Download</button>
+                <button><a href="${links[i]}">Download</a></button>
         `;
         root.appendChild(div);
     };
