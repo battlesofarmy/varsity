@@ -6,15 +6,26 @@
     <title>Document</title>
 </head>
 <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
 body{
-    text-align: center;
+    /* text-align: center; */
 }
 .item{
     display: flex;
     justify-content: center;
     align-items:  center;
     gap: 20px;
+    margin: 20px 0;
 }
+/* .content{
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    gap: 20px;
+} */
 button{
     padding: 10px 16px;
     background-color: teal;
@@ -26,18 +37,31 @@ button{
 </style>
 <body>
 
-    <h1>CSE_1101 --All Lecture Notes...</h1>
+    <h1 style="text-align: center; margin: 30px 0;">CSE_1101 --All Lecture Notes...</h1>
     <div id="root">
+
         <div class="item">
-            <h2 style="color: green;">Course Outline: </h2>
-            <p>CSE-1101-Computer-Fundamentals-Programming-Techniques</p>
+            <div class="content">
+                <h2 style="color: green;">Course Outline: </h2>
+                <p>CSE-1101-Computer-Fundamentals-Programming-Techniques</p>
+            </div>
             <button>Download</button>
         </div>
         <div class="item">
-            <h2 style="color: green;">Course Outline: </h2>
-            <p>CSE-1101-Computer-Fundamentals-Programming-Techniques</p>
+            <div class="content">
+                <h2 style="color: green;">Course Outline: </h2>
+                <p>CSE-1101-Computer-Fundamentals-Programming-Techniques</p>
+            </div>
             <button>Download</button>
         </div>
+        <div class="item">
+            <div class="content">
+                <h2 style="color: green;">Course Outline: </h2>
+                <p>CSE-1101-Computer-Fundamentals-Programming-Techniques</p>
+            </div>
+            <button>Download</button>
+        </div>
+
     </div>
 
 <script>
