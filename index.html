@@ -16,11 +16,13 @@ body{
 }
 .item{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items:  center;
     gap: 10px;
     margin: 20px 0;
-
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px;
+    border-radius: 10px;
 }
 .item h2{
     color: green;
@@ -40,6 +42,7 @@ button{
     font-weight: 600;
     border: none;
     cursor: pointer;
+    border-radius: 6px;
 }
 </style>
 <body>
@@ -75,8 +78,29 @@ button{
 
 
     </div>
-
+<br><br><br>
+<p>Muntasir Ahmed Fahim</p>
+<br>
 <script>
+    const titles = ['Course Title','Lecture-1','Lecrure-2'];
+    const descriptions = ['Computer-Fundamentals-Programming-Techniques','test','test'];
+    const links = ['test','test','test'];
+
+    const root = document.getElementById('root');
+
+
+    for(let i=0;i<titles.length;i++){
+        const div = document.createElement('div');
+        div.classList.add('item');
+        div.innerHTML =  `
+                <div class="content">
+                    <h2>${titles[i]} </h2>
+                    <p>${descriptions}</p>
+                </div>
+                <button>Download</button>
+        `;
+        root.appendChild(div);
+    };
 </script>
 </body>
 </html>
